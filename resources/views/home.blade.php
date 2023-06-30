@@ -28,7 +28,7 @@
             <h2>All Tasks</h2>
             @foreach ($tasks as $task)
                 <div style="background-color: gray; padding: 10px; margin:10px;">
-                    <h3>{{ $task['title'] }}</h3>
+                    <h3>{{ $task['title'] }} by {{ $task->user->name }}</h3>
                     {{ $task['desc'] }}
                     <p><a href="/edit-task/{{ $task->id }}">Edit</a></p>
                     <form action="/delete-task/{{ $task->id }}" method="POST">
