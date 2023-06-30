@@ -23,6 +23,16 @@
                 <button>Save Post</button>
             </form>
         </div>
+
+        <div style="border: 3px solid black;">
+            <h2>All Tasks</h2>
+            @foreach ($tasks as $task)
+                <div style="background-color: gray; padding: 10px; margin:10px;">
+                    <h3>{{ $task['title'] }}</h3>
+                    {{ $task['desc'] }}
+                </div>
+            @endforeach
+        </div>
     @else
         <div style="border: 3px solid black;">
             <h2>Register</h2>
