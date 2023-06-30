@@ -7,6 +7,14 @@ use Illuminate\Http\Request;
 
 class TaskController extends Controller
 {
+
+    public function deleteTask(Task $task){
+        if(auth()->user()->id === $task['user_id']){
+            $task->delete();
+        }
+        return redirect('/');
+    }
+
     // Task $task -> gives us the task we are trying to update
     // Request $request -> gives us the form data
     public function editTask(Task $task, Request $request){

@@ -34,3 +34,4 @@ Route::post('/login', [UserController::class, 'login']);
 Route::post('/create-task', [TaskController::class, 'createTask']);
 Route::get('/edit-task/{task}', [TaskController::class, 'editPage']);
 Route::put('/edit-task/{task}', [TaskController::class, 'editTask']);
+Route::delete('/delete-task/{task}', [TaskController::class, 'deleteTask']);
